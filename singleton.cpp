@@ -2,6 +2,10 @@
 
 #include <iostream>
 
+Singleton::Singleton(){
+
+}
+
 int Singleton::func1()
 {
     std::cout <<"Something";
@@ -18,16 +22,8 @@ void Singleton::objectAddress()
     std::cout<<(long) this;
 }
 
-Singleton * Singleton::instance()
+Singleton &Singleton::instance()
 {
-    static Singleton * obj = nullptr;
-    if(obj == nullptr)
-        obj = new Singleton();
-
+    static Singleton obj;
     return obj;
-}
-
-Singleton::~Singleton()
-{
-    delete singleton;
 }

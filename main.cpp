@@ -4,12 +4,12 @@ using namespace std;
 void yetAnotherfunc()
 {
     cout <<"\nyetAnotherfunc: \n";
-    singleton->objectAddress();
+    singleton.objectAddress();
 }
 int main()
 {
     cout << "main: \n";
-    singleton->objectAddress();
+    singleton.objectAddress();
 
     yetAnotherfunc();
 
